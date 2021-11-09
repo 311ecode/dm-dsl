@@ -44,9 +44,13 @@ describe('a', () => {
     const res = dm.name('root').asRoot.template({a:'b' })
     .name('child').memberOf('root').path('c').template({d:'e'})()
 
-    it('memberOf', ()=>{  
+    it('rootData', ()=>{  
       const resultingData = res()
-  
+      assert.deepEqual(resultingData,{a:'b'})
+    })
+
+    it('memberOf ', ()=>{  
+      const resultingData = res.add.child()  
       assert.deepEqual(resultingData,{a:'b'})
     })
   })
