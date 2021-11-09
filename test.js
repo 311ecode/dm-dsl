@@ -51,7 +51,7 @@ describe('a', () => {
 
     it('memberOf ', ()=>{  
       const resultingData = res.add.child()  
-      assert.deepEqual(resultingData,{a:'b'})
+      assert.deepEqual(resultingData,{a:'b',c:{d:'e'}})
     })
   })
 
