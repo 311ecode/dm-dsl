@@ -53,6 +53,19 @@ describe('a', () => {
       const resultingData = res.add.child()  
       assert.deepEqual(resultingData,{a:'b',c:{d:'e'}})
     })
+
+    it('memberOf 2X', ()=>{  
+      const res = dm.name('root').asRoot.template({a:'b' })
+      .name('child').memberOf('root').path('c').template({d:'e'})
+      .name('child2').memberOf('root').path('f').template({g:'h'})
+      ()
+
+      const resultingData = res.add.child2.add.child()  
+   
+      assert.deepEqual(resultingData,{a:'b',c:{d:'e'},f:{g:'h'}})
+    })
+
+    
   })
 
 
