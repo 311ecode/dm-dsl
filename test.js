@@ -40,7 +40,7 @@ describe('a', () => {
     })
   })
 
-  describe('full tests', () => {
+  describe('basic memer tests', () => {
     const res = dm.name('root').asRoot.template({a:'b' })
     .name('child').memberOf('root').path('c').template({d:'e'})()
 
