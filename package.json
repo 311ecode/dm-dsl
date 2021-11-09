@@ -1,0 +1,17 @@
+{
+  "name": "dm-dsl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dsl-framework": "^1.7.22"
+  },
+  "devDependencies": {
+    "mocha": "^9.1.3"
+  }
+}
