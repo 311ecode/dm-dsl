@@ -50,7 +50,7 @@ describe('a', () => {
     })
 
     it('memberOf ', ()=>{  
-      const resultingData = res.add.child()  
+      const resultingData = res.set.child()  
       assert.deepEqual(resultingData,{a:'b',c:{d:'e'}})
     })
 
@@ -60,7 +60,7 @@ describe('a', () => {
       .name('child2').memberOf('root').path('f').template({g:'h'})
       ()
 
-      const resultingData = res.add.child2.add.child()  
+      const resultingData = res.set.child2.set.child()  
    
       assert.deepEqual(resultingData,{a:'b',c:{d:'e'},f:{g:'h'}})
     })
@@ -72,7 +72,7 @@ describe('a', () => {
       .name('child3').memberOf('child2').path('i').template({j:'k'})
       ()
 
-      const resultingData = res.add.child2.add.child3.add.child()  
+      const resultingData = res.set.child2.set.child3.set.child()  
    
       assert.deepEqual(resultingData,{a:'b',c:{d:'e'},f:{g:'h'},i:{j:'k'}})
     })
